@@ -22,8 +22,8 @@
     <div class="position-relative d-flex text-center text-white promo-banner-bg py-3">
         <div class="p-lg-2 mx-auto my-5">
             <h1 class="display-5 fw-normal">Welcome to EATERIO</h1>
-            <p class="lead fw-normal">Food ordering system of SIIT Bangkradi Campus Canteen</p>
-            <span class="xsmall-font text-muted">Food photo created by jcomp - www.freepik.com</span>
+            <p class="lead fw-normal">Food ordering system of NIE Campus Canteen</p>
+            <!--<span class="xsmall-font text-muted">Food photo created by jcomp - www.freepik.com</span>-->
         </div>
     </div>
 
@@ -106,8 +106,7 @@
     </div>
     <footer
         class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
+        <span class="smaller-font">&copy; 2022 SeriousEater Group<br /><span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
         <ul class="nav justify-content-end list-unstyled d-flex">
             <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
                         class="bi bi-github"></i></a></li>
