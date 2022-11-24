@@ -17,7 +17,7 @@
       "id": "rfnd_test_57gqeohjzrmanxl0vl4",
       "location": "/charges/chrg_test_57gqaf72g7nxpo1mk9m/refunds/rfnd_test_57gqeohjzrmanxl0vl4",
       "amount": 100000,
-      "currency": "thb",
+      "currency": "Rs",
       "voided": true,
       "charge": "chrg_test_57gqaf72g7nxpo1mk9m",
       "transaction": "trxn_test_57gqeohtv0qox7gqj0w",

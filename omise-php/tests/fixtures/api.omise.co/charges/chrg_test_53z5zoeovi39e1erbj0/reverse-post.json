@@ -4,7 +4,7 @@
   "livemode": false,
   "location": "/charges/chrg_test_53z5zoeovi39e1erbj0",
   "amount": 100000,
-  "currency": "thb",
+  "currency": "Rs",
   "description": "Order-384",
   "capture": false,
   "authorized": true,

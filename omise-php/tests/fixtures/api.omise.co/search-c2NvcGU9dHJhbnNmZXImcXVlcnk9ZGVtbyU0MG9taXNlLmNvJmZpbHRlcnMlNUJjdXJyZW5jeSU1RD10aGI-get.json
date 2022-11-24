@@ -4,7 +4,7 @@
   "scope": "transfer",
   "query": "demo@omise.co",
   "filters": {
-    "currency": "thb"
+    "currency": "Rs"
   },
   "page": 1,
   "per_page": 30,
@@ -28,7 +28,7 @@
       "sent": false,
       "paid": false,
       "amount": 50000,
-      "currency": "thb",
+      "currency": "Rs",
       "fee": 3000,
       "failure_code": null,
       "failure_message": null,

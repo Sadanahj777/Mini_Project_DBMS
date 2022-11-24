@@ -5,11 +5,11 @@
   "livemode": false,
   "location": "/account",
   "country": "TH",
-  "currency": "THB",
+  "currency": "Rs",
   "email": "somchai.prasert@example.com",
   "created_at": "2019-12-31T12:59:59Z",
   "supported_currencies": [
-    "THB",
+    "Rs",
     "JPY",
     "USD",
     "EUR",

@@ -131,7 +131,7 @@
                                         $ord_query = "SELECT COUNT(*) AS cnt,SUM(ord_amount*ord_buyprice) AS gt FROM order_detail WHERE orh_id = {$og_row['orh_id']}";
                                         $ord_arr = $mysqli -> query($ord_query) -> fetch_array();
                                     ?>
-                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> THB</div>
+                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> Rs</div>
                                         </small>
                                         <div class="col">
                                             <ul class="list-unstyled">
@@ -219,7 +219,7 @@
                                         $ord_query = "SELECT COUNT(*) AS cnt,SUM(ord_amount*ord_buyprice) AS gt FROM order_detail WHERE orh_id = {$og_row['orh_id']}";
                                         $ord_arr = $mysqli -> query($ord_query) -> fetch_array();
                                     ?>
-                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> THB</div>
+                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> Rs</div>
                                         </small>
                                         <div class="col">
                                             <ul class="list-unstyled">
@@ -307,7 +307,7 @@
                                         $ord_query = "SELECT COUNT(*) AS cnt,SUM(ord_amount*ord_buyprice) AS gt FROM order_detail WHERE orh_id = {$og_row['orh_id']}";
                                         $ord_arr = $mysqli -> query($ord_query) -> fetch_array();
                                     ?>
-                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> THB</div>
+                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> Rs</div>
                                         </small>
                                         <div class="col">
                                             <ul class="list-unstyled">
@@ -395,7 +395,7 @@
                                         $ord_query = "SELECT COUNT(*) AS cnt,SUM(ord_amount*ord_buyprice) AS gt FROM order_detail WHERE orh_id = {$og_row['orh_id']}";
                                         $ord_arr = $mysqli -> query($ord_query) -> fetch_array();
                                     ?>
-                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> THB</div>
+                                        <div class="col pt-2 mb-2 border-top"><?php echo $ord_arr["cnt"]?> menus | <?php echo $ord_arr["gt"]?> Rs</div>
                                         </small>
                                         <div class="col">
                                             <ul class="list-unstyled">
@@ -440,13 +440,8 @@
     </div>
 
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

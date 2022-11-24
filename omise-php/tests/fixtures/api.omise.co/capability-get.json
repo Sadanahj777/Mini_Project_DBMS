@@ -50,7 +50,7 @@
       "credit_card": {
         "type": "card",
         "currencies": [
-          "thb",
+          "Rs",
           "jpy",
           "usd",
           "eur",
@@ -70,7 +70,7 @@
       "installment_bay": {
         "type": "installment",
         "currencies": [
-          "thb"
+          "Rs"
         ],
         "allowed_installment_terms": [
           3,
@@ -89,7 +89,7 @@
       "installment_first_choice": {
         "type": "installment",
         "currencies": [
-          "thb"
+          "Rs"
         ],
         "allowed_installment_terms": [
           3,
@@ -112,7 +112,7 @@
       "installment_kbank": {
         "type": "installment",
         "currencies": [
-          "thb"
+          "Rs"
         ],
         "allowed_installment_terms": [
           3,
@@ -130,7 +130,7 @@
       "installment_bbl": {
         "type": "installment",
         "currencies": [
-          "thb"
+          "Rs"
         ],
         "allowed_installment_terms": [
           4,
@@ -149,7 +149,7 @@
       "installment_ktc": {
         "type": "installment",
         "currencies": [
-          "thb"
+          "Rs"
         ],
         "allowed_installment_terms": [
           3,

@@ -86,8 +86,8 @@
                 <label for="f_name">Menu Name</label>
             </div>
             <div class="form-floating mb-2">
-                <input type="number" step=".25" min="0.00" max="999.75" class="form-control" id="f_price" placeholder="Price (THB)" name="f_price" required>
-                <label for="f_price">Price (THB)</label>
+                <input type="number" step=".25" min="0.00" max="999.75" class="form-control" id="f_price" placeholder="Price (Rs)" name="f_price" required>
+                <label for="f_price">Price (Rs)</label>
             </div>
             <div class="mb-2">
                 <label for="formFile" class="form-label">Upload food image</label>

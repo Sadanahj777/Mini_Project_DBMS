@@ -38,7 +38,7 @@ class ChargeTest extends TestConfig
     public function create()
     {
         $charge = OmiseCharge::create(array('amount'      => 100000,
-                                            'currency'    => 'thb',
+                                            'currency'    => 'Rs',
                                             'description' => 'Order-384',
                                             'ip'          => '127.0.0.1',
                                             'card'        => 'tokn_test_4zmrjhuk2rndz24a6x0'));

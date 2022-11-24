@@ -183,7 +183,7 @@
                 <dt class="col-sm-3">E-mail</dt>
                 <dd class="col-sm-9"><?php echo $row["s_email"];?></dd>
                 <dt class="col-sm-3">Phone Number</dt>
-                <dd class="col-sm-9"><?php echo "(+66) ".$row["s_phoneno"];?></dd>
+                <dd class="col-sm-9"><?php echo "(+99) ".$row["s_phoneno"];?></dd>
             </dl>
         </div>
         <!-- END CUSTOMER INFORMATION -->
@@ -192,13 +192,8 @@
 
 
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-2 bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

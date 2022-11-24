@@ -231,7 +231,7 @@
                         <?php } ?>
                     </td>
                     
-                    <td class="small"><?php echo $row["s_email"];?><br/><?php echo "(+66) ".$row["s_phoneno"];?></td>
+                    <td class="small"><?php echo $row["s_email"];?><br/><?php echo "(+99) ".$row["s_phoneno"];?></td>
                     <td>
                         <a href="admin_shop_detail.php?s_id=<?php echo $row["s_id"]?>"
                             class="btn btn-sm btn-primary">View</a>

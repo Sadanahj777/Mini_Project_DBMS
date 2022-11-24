@@ -18,7 +18,7 @@
       "livemode": false,
       "location": "/disputes/dspt_test_57gqagy0yfk99ctjlue",
       "amount": 100000,
-      "currency": "thb",
+      "currency": "Rs",
       "status": "won",
       "transaction": "trxn_test_57gqagy5we902sfmmqe",
       "message": "Demo dispute message.",

@@ -4,5 +4,5 @@
   "type": "bill_payment_tesco_lotus",
   "flow": "offline",
   "amount": 100000,
-  "currency": "thb"
+  "currency": "Rs"
 }

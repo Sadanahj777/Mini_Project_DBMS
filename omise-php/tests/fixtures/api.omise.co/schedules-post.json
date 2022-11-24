@@ -14,7 +14,7 @@
   "end_date": "2020-12-01",
   "charge": {
     "amount": 100000,
-    "currency": "thb",
+    "currency": "Rs",
     "description": "Membership Fee",
     "customer": "cust_test_585t0gn3yxe6aeq9wq7",
     "card": null
