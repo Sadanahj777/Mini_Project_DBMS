@@ -94,7 +94,7 @@
         <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Pujitha. Sadana. Sapna.
                 </span></span>
         <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
+            <li class="ms-3"><a class="text-light" target="_blank" ><i
                         class="bi bi-github"></i></a></li>
         </ul>
     </footer>
