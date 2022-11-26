@@ -27,7 +27,7 @@
         <div class="p-lg-2 mx-auto my-3">
             <h1 class="display-5 fw-normal">ADMIN DASHBOARD</h1>
             <p class="lead fw-normal">NIE Campus Canteen</p>
-            <span class="xsmall-font text-muted">Food photo created by jcomp - www.freepik.com</span>
+            
         </div>
     </div>
 
