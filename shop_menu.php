@@ -106,7 +106,7 @@
                         echo $open[0].":".$open[1]." - ".$close[0].":".$close[1];
                     ?>
                 </li>
-                <li class="">Telephone number: <?php echo "(+66) ".$shop_row["s_phoneno"];?></li>
+                <li class="">Telephone number: <?php echo "(+99) ".$shop_row["s_phoneno"];?></li>
             </ul>
         </div>
 
@@ -137,7 +137,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title fs-5"><?php echo $food_row["f_name"]?></h5>
-                            <p class="card-text"><?php echo $food_row["f_price"]?> THB</p>
+                            <p class="card-text"><?php echo $food_row["f_price"]?> Rs</p>
                             <a href="food_item.php?<?php echo "s_id=".$food_row["s_id"]."&f_id=".$food_row["f_id"]?>" class="btn btn-sm mt-3 btn-outline-secondary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-cart-plus" viewBox="0 0 16 16">
@@ -162,13 +162,8 @@
 
     </div>
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-2 bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

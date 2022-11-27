@@ -86,8 +86,8 @@
                 <label for="f_name">Menu Name</label>
             </div>
             <div class="form-floating mb-2">
-                <input type="number" step=".25" min="0.00" max="999.75" class="form-control" id="f_price" placeholder="Price (THB)" name="f_price" required>
-                <label for="f_price">Price (THB)</label>
+                <input type="number" step=".25" min="0.00" max="999.75" class="form-control" id="f_price" placeholder="Price (Rs)" name="f_price" required>
+                <label for="f_price">Price (Rs)</label>
             </div>
             <div class="mb-2">
                 <label for="formFile" class="form-label">Upload food image</label>
@@ -98,13 +98,8 @@
     </div>
 
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

@@ -212,7 +212,7 @@
                                 <div class="ms-3 mt-3 me-auto">
                                     <div class="fw-normal"><span class="h5"><?php echo $row["ct_amount"]?>x</span>
                                         <?php echo $row["f_name"]?>
-                                        <p><?php printf("%.2f THB <small class='text-muted'>(%.2f THB each)</small>",$row["f_price"]*$row["ct_amount"],$row["f_price"])?><br />
+                                        <p><?php printf("%.2f Rs <small class='text-muted'>(%.2f Rs each)</small>",$row["f_price"]*$row["ct_amount"],$row["f_price"])?><br />
                                             <span class="text-muted small"> <?php echo $row["ct_note"]?></span>
                                             <ul class="list-unstyled list-inline">
                                                 <li>
@@ -273,7 +273,7 @@
                                         ON ct.f_id = f.f_id WHERE ct.c_id = {$_SESSION['cid']} GROUP BY ct.c_id";
                                         $gt_arr = $mysqli -> query($gt_query) -> fetch_array();
                                         $order_cost = $gt_arr["grandtotal"];
-                                        printf("%.2f THB",$order_cost);
+                                        printf("%.2f Rs",$order_cost);
                                         if($order_cost<20){
                                             $min_cost = false;  $no_order=true;
                                         }else{
@@ -371,13 +371,13 @@
                             <script type="text/javascript" src="https://cdn.omise.co/omise.js"
                                 data-key="pkey_test_5pj8zasgcvaasrujrrs"
                                 data-image="https://github.com/waterthatfrozen/EATERIO/blob/9852a00d8e47b50cbe428a7f7ec763446ac273b4/img/ICON_F.png"
-                                data-frame-label="EATERIO | SIIT BKD"
+                                data-frame-label="EATERIO | NIE"
                                 data-button-label="Proceed with payment"
                                 data-submit-label="Submit"
                                 data-locale="en"
                                 data-location="no"
                                 data-amount="<?php echo $order_cost*100;?>"
-                                data-currency="thb">
+                                data-currency="Rs">
                             </script>
                             <?php } ?>
                         </div>
@@ -403,13 +403,8 @@
 
     </div>
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

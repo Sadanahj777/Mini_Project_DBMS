@@ -80,7 +80,7 @@
             </div>
             <div class="col-6">
                 <h1 class="display-5 strong"><?php echo $food_row["f_name"];?></h1>
-                <h3 class="fw-light"><?php echo $food_row["f_price"]?> THB</h3>
+                <h3 class="fw-light"><?php echo $food_row["f_price"]?> Rs</h3>
                 <ul class="list-unstyled">
                     <li class="my-2">
                         <?php 
@@ -158,7 +158,7 @@
                                     $count_query = "SELECT SUM(ord.ord_buyprice*ord.ord_amount) AS prf FROM order_detail ord WHERE ord.f_id = {$f_id};";
                                     $count_result = $mysqli -> query($count_query) -> fetch_array();
                                     if(is_null($count_result["prf"])){echo "0.00";}else{echo $count_result["prf"];}
-                                ?> THB</h5>
+                                ?> Rs</h5>
                             <p class="card-text small">Gained from this menu</p>
                         </div>
                     </div>
@@ -343,13 +343,8 @@
 
     </div>
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

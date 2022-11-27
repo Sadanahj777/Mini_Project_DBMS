@@ -20,9 +20,9 @@ class OmiseCapabilities extends OmiseApiResource
 
     /**
      * Sets up 'shortcuts' to filters so they may be used thus:
-     *    $capabilities->backendFilter['currency']('THB')
+     *    $capabilities->backendFilter['currency']('Rs')
      * As well as the original:
-     *    $capabilities->makeBackendFilterCurrency('THB')
+     *    $capabilities->makeBackendFilterCurrency('Rs')
      */
     protected function setupFilterShortcuts()
     {

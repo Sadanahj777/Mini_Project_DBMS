@@ -135,7 +135,7 @@
                                         <div class="ms-3 me-auto">
                                             <div class="fw-normal"><span class="h5"><?php echo $ord_row["ord_amount"]?>x
                                                 </span><?php echo $ord_row["f_name"]?>
-                                                <p><?php printf("%.2f THB <small class='text-muted'>(%.2f THB each)</small>",$ord_row["ord_buyprice"]*$ord_row["ord_amount"],$ord_row["ord_buyprice"]);?><br />
+                                                <p><?php printf("%.2f Rs <small class='text-muted'>(%.2f Rs each)</small>",$ord_row["ord_buyprice"]*$ord_row["ord_amount"],$ord_row["ord_buyprice"]);?><br />
                                                     <span
                                                         class="text-muted small"><?php echo $ord_row["ord_note"]?></span>
                                                 </p>
@@ -154,7 +154,7 @@
                                 <?php
                                     $gt_query = "SELECT SUM(ord_amount*ord_buyprice) AS gt FROM order_detail WHERE orh_id = {$orh_id}";
                                     $gt_arr = $mysqli -> query($gt_query) -> fetch_array();
-                                    printf("%.2f THB",$gt_arr["gt"]);
+                                    printf("%.2f Rs",$gt_arr["gt"]);
                                 ?>
                             </li>
                             <li class="list-item fw-light small">Pay by
@@ -181,13 +181,8 @@
     </div>
 
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

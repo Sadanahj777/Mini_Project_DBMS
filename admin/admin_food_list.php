@@ -182,7 +182,7 @@
                     <th><?php echo $i++;?></th>
                     <td><?php echo $row["f_name"];?></td>
                     <td><?php echo $row["s_name"];?></td>
-                    <td><?php echo $row["f_price"]." THB";?></td>
+                    <td><?php echo $row["f_price"]." Rs";?></td>
                     <td>
                     <?php 
                         if($row["f_todayavail"]==1){
@@ -217,13 +217,8 @@
     </div>
 
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

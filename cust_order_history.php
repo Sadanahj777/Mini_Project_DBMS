@@ -91,7 +91,7 @@
                                     ?>
                                         <div class="col pt-2 border-top"><?php echo $ord_arr["cnt"]?> item(s)</div>
                                         <div class="col mt-1 mb-2"><strong class="h5"><?php echo $ord_arr["gt"]?>
-                                                THB</strong></div>
+                                                Rs</strong></div>
                                         <div class="col text-end">
                                             <a href="cust_order_detail.php?orh_id=<?php echo $og_row["orh_id"]?>"
                                                 class="text-dark text-decoration-none">
@@ -179,7 +179,7 @@
                                     ?>
                                         <div class="col pt-2 border-top"><?php echo $ord_arr["cnt"]?> item(s)</div>
                                         <div class="col mt-1 mb-2"><strong class="h5"><?php echo $ord_arr["gt"]?>
-                                                THB</strong></div>
+                                                Rs</strong></div>
                                         <div class="col text-end">
                                             <a href="cust_order_detail.php?orh_id=<?php echo $og_row["orh_id"]?>"
                                                 class="text-dark text-decoration-none">
@@ -218,13 +218,8 @@
         </div>
     </div>
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

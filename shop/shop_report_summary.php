@@ -89,7 +89,7 @@
                                     WHERE orh.s_id = {$s_id} AND orh_orderstatus = 'FNSH' AND (DATE(orh_finishedtime) BETWEEN DATE('{$start_date}') AND DATE('{$end_date}'));";
                                     $result = $mysqli -> query($query) -> fetch_array();
                                     if(is_null($result["rev"])){$grandtotal = 0;} else{$grandtotal = $result["rev"];}
-                                    printf("%.2f THB",$grandtotal);
+                                    printf("%.2f Rs",$grandtotal);
                                 ?>
                             </h5>
                             <p class="card-text small">Total revenue</p>
@@ -132,8 +132,8 @@
                         <div class="card-body">
                             <h5 class="card-title">
                                 <?php
-                                    if($num_order == 0){echo "0.00 THB";}
-                                    else{printf("%.2f THB",$grandtotal/$num_order);}
+                                    if($num_order == 0){echo "0.00 Rs";}
+                                    else{printf("%.2f Rs",$grandtotal/$num_order);}
                                 ?>
                             </h5>
                             <p class="card-text small">Averge cost per order</p>
@@ -232,14 +232,14 @@
                         <tr>
                             <th><?php echo $i++;?></th>
                             <td><?php echo $row["f_name"]?></td>
-                            <td><?php echo $row["f_price"]." THB"?></td>
+                            <td><?php echo $row["f_price"]." Rs"?></td>
                             <td><?php echo $row["amount"]." plates"?></td>
-                            <td><?php echo $row["subtotal"]." THB"?></td>
+                            <td><?php echo $row["subtotal"]." Rs"?></td>
                         </tr>
                         <?php } ?>
                         <tr class="fw-bold table-info">
                             <td colspan="4" class="text-end">Grand Total</td>
-                            <td><?php printf("%.2f THB",$grandtotal);?></td>
+                            <td><?php printf("%.2f Rs",$grandtotal);?></td>
                         </tr>
                     </tbody>
                 </table>
@@ -257,13 +257,8 @@
 
     </div>
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

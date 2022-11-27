@@ -116,7 +116,7 @@ class CapabilitiesTest extends TestConfig
     {
         $backends = $this->capabilities->getBackends(
             $this->capabilities->makeBackendFilterType('installment'),
-            $this->capabilities->makeBackendFilterCurrency('thb')
+            $this->capabilities->makeBackendFilterCurrency('Rs')
         );
 
         $this->assertCount(5, $backends);

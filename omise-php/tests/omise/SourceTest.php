@@ -22,7 +22,7 @@ class SourceTest extends TestConfig
         $parameter = array(
             'type'     => 'bill_payment_tesco_lotus',
             'amount'   => 15000,
-            'currency' => 'thb'
+            'currency' => 'Rs'
         );
 
         $source = OmiseSource::create($parameter);

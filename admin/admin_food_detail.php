@@ -80,7 +80,7 @@
             </div>
             <div class="col-6">
                 <h1 class="display-5 strong"><?php echo $food_row["f_name"];?></h1>
-                <h3 class="fw-light"><?php echo $food_row["f_price"]?> THB</h3>
+                <h3 class="fw-light"><?php echo $food_row["f_price"]?> Rs</h3>
                 <ul class="list-unstyled">
                     <li class=""><?php echo "from ".$food_row["s_name"];?></li>
                     <li class="my-2">
@@ -279,13 +279,8 @@
 
     </div>
     <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
-        <span class="smaller-font">&copy; 2021 SeriousEater Group<br /><span class="xsmall-font">Paphana Y. Sirada C.
-                Thanakit L.</span></span>
-        <ul class="nav justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-light" target="_blank" href="https://github.com/waterthatfrozen/EATERIO"><i
-                        class="bi bi-github"></i></a></li>
-        </ul>
+    class="footer d-flex flex-wrap justify-content-between align-items-center px-5 py-3 mt-auto bg-secondary text-light">
+        <span class="xsmall-font">Pujitha. Sadana. Sapna</span></span>
     </footer>
 </body>
 

@@ -12,7 +12,7 @@
       "object": "schedule",
       "charge": {
         "amount": 100000,
-        "currency": "thb",
+        "currency": "Rs",
         "description": "Membership Fee",
         "customer": "cust_test_5234fzk37pi2mz0cen3",
         "card": null

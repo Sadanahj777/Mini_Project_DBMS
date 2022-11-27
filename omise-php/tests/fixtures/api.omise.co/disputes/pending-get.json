@@ -12,7 +12,7 @@
       "livemode": false,
       "location": "/disputes/dspt_test_4zgf15h89w8t775kcm8",
       "amount": 100000,
-      "currency": "thb",
+      "currency": "Rs",
       "status": "pending",
       "message": "This is an unauthorized transaction",
       "charge": "chrg_test_4zgcsiv4s6ewsy8nrw3",
