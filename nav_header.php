@@ -35,7 +35,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
                         <a type="button" class="btn btn-light" href="cust_cart.php">
-                            My Cart
+                            My   Cart
                             <?php
                                 $incart_query = "SELECT SUM(ct_amount) AS incart_amt FROM cart WHERE c_id = {$_SESSION['cid']}";
                                 $incart_result = $mysqli -> query($incart_query) -> fetch_array(); 
