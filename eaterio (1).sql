@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2021 at 09:17 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 8.0.9
+-- Generation Time: Nov 28, 2022 at 12:37 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -25,7 +25,7 @@ DELIMITER $$
 --
 -- Procedures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `customer_order` (IN `order_id` INT(11))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `customer_order` (IN `order_id` INT(11))   BEGIN
 	SELECT orh.orh_refcode AS reference_code, CONCAT(c.c_firstname,' ',c.c_lastname) AS customer_name, s.s_name AS shop_name,f.f_name AS food_name,ord.ord_buyprice AS buy_price, ord.ord_amount AS amount ,ord.ord_note AS order_note, orh.orh_ordertime AS order_time , orh.orh_pickuptime AS pickup_time
     FROM order_header orh 
     INNER JOIN order_detail ord ON orh.orh_id = ord.orh_id
@@ -35,7 +35,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `customer_order` (IN `order_id` INT(
     WHERE orh.orh_id = order_id; 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `customer_order_history` (IN `customer_id` INT(11))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `customer_order_history` (IN `customer_id` INT(11))   BEGIN
 	SELECT orh.orh_refcode AS reference_code, CONCAT(c.c_firstname,' ',c.c_lastname) AS customer_name,
     s.s_name AS shop_name, orh.orh_ordertime AS order_time, orh.orh_pickuptime AS pickup_time,
     p.p_amount AS order_cost, orh.orh_orderstatus AS order_status
@@ -45,14 +45,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `customer_order_history` (IN `custom
     WHERE c.c_id = customer_id;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `shop_alltime_revenue` (IN `shop_id` INT(11))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `shop_alltime_revenue` (IN `shop_id` INT(11))   BEGIN
 	SELECT SUM(ord.ord_amount*ord.ord_buyprice) AS alltime_revenue 
     FROM order_header orh INNER JOIN order_detail ord ON orh.orh_id = ord.orh_id
     INNER JOIN food f ON f.f_id = ord.f_id INNER JOIN shop s ON s.s_id = orh.s_id
     WHERE s.s_id = shop_id AND orh.orh_orderstatus = 'FNSH';
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `shop_menu_revenue` (IN `shop_id` INT(11))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `shop_menu_revenue` (IN `shop_id` INT(11))   BEGIN
 	SELECT f.f_name AS food_name, SUM(ord.ord_amount*ord.ord_buyprice) AS menu_revenue
     FROM order_header orh INNER JOIN order_detail ord ON orh.orh_id = ord.orh_id
     INNER JOIN food f ON f.f_id = ord.f_id
@@ -77,6 +77,14 @@ CREATE TABLE `cart` (
   `ct_note` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`ct_id`, `c_id`, `s_id`, `f_id`, `ct_amount`, `ct_note`) VALUES
+(64, 21, 102, 35, 1, ''),
+(65, 21, 102, 36, 1, '');
+
 -- --------------------------------------------------------
 
 --
@@ -99,13 +107,7 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`c_id`, `c_username`, `c_pwd`, `c_firstname`, `c_lastname`, `c_email`, `c_gender`, `c_type`) VALUES
-(2, '6222780668', '6222780668', 'Sirada', 'Chaisawat', '6222780668@g.siit.tu.ac.th', 'F', 'STD'),
-(3, '6222780569', '6222780569', 'Thanakit', 'Lerttomolsakul', '6222780569@g.siit.tu.ac.th', 'M', 'STD'),
-(4, 'BKD_Admin01', '12345678', 'Admin', 'Bangkradi', 'admin_dummy@email.com', 'M', 'ADM'),
-(11, 'someone', 'someonee', 'someone', 'someone', 'someone@email.com', 'N', 'GUE'),
-(16, '6222780379', '6222780379', 'Paphana', 'Yiwsiw', '6222780379@g.siit.tu.ac.th', 'M', 'STD'),
-(19, 'iamguest', 'iamguest', 'Guest01', 'Guest01', 'guest@gmail.com', 'M', 'GUE'),
-(20, 'johndoe', 'johndoee', 'John', 'Doey', 'john@gmail.com', 'F', 'STF');
+(21, 'pujitha', 'pujitharc', 'Pujitha', 'RC', 'pujitharoopa@gmail.com', 'F', 'STD');
 
 -- --------------------------------------------------------
 
@@ -128,36 +130,20 @@ CREATE TABLE `food` (
 --
 
 INSERT INTO `food` (`f_id`, `s_id`, `f_name`, `f_price`, `f_todayavail`, `f_preorderavail`, `f_pic`) VALUES
-(1, 1, 'ข้าวกะเพราหมูสับ', '40.00', 1, 0, '1_1.jpeg'),
-(2, 1, 'ข้าวผัดกุ้ง', '55.00', 1, 1, '2_1.jpeg'),
-(3, 1, 'ผัดซีอิ้ว', '40.00', 1, 1, '3_1.jpeg'),
-(4, 1, 'ข้าวไข่เจียว', '30.00', 1, 1, '4_1.jpeg'),
-(5, 1, 'ข้าวหมูกะเทียม', '35.00', 1, 1, '5_1.jpeg'),
-(6, 1, 'มาม่าผัดไข่', '35.00', 1, 1, '6_1.jpeg'),
-(7, 1, 'ข้าวผัดไข่', '35.00', 1, 1, '7_1.jpeg'),
-(8, 1, 'ผัดพริกแกง', '40.00', 1, 1, NULL),
-(9, 1, 'ข้าวกะเพราไก่', '40.00', 1, 1, '9_1.jpeg'),
-(10, 1, 'ข้าวไก่ทอด', '40.00', 1, 1, '10_1.jpeg'),
-(11, 2, 'ข้าวไข่พะโล้', '30.00', 1, 1, NULL),
-(12, 2, 'ข้าวแกงจืดเต้าหู้หมูสับ', '30.00', 1, 1, '12_2.jpeg'),
-(13, 2, 'ข้าวพะแนงไก่', '30.00', 1, 1, '13_2.jpeg'),
-(14, 2, 'ข้าวมัสมั่นไก่', '30.00', 1, 1, '14_2.jpeg'),
-(15, 2, 'ข้าวราดผัดผัก', '30.00', 1, 1, '15_2.jpeg'),
-(16, 2, 'ข้าวผัดวุ้นเส้น', '30.00', 1, 1, '16_2.jpeg'),
-(17, 2, 'ข้าวบวบผัดไข่', '30.00', 1, 1, NULL),
-(18, 2, 'ข้าวผัดเต้าหู้ทรงเครื่อง', '30.00', 1, 1, NULL),
-(19, 2, 'ข้าวไข่ตุ๋น', '30.00', 1, 1, '19_2.jpeg'),
-(20, 2, 'ข้าวไข่ดาว', '25.00', 1, 1, '20_2.jpeg'),
-(21, 3, 'ก๋วยเตี๋ยวน้ำใส', '35.00', 1, 1, '21_3.jpeg'),
-(22, 3, 'บะหมี่หมูแดง', '30.00', 1, 1, '22_3.jpeg'),
-(23, 3, 'ก๋วยเตี๋ยวต้มยำ', '35.00', 1, 1, '23_3.jpeg'),
-(24, 3, 'ก๋วยเตี๋ยวเย็นตาโฟ', '35.00', 1, 1, NULL),
-(25, 3, 'ก๋วยเตี๋ยวแห้งต้มยำ', '35.00', 1, 1, NULL),
-(26, 3, 'ก๋วยเตี๋ยวน้ำตก', '35.00', 1, 1, '26_3.jpeg'),
-(27, 3, 'เกาเหลาหมูตุ๋น', '40.00', 1, 0, NULL),
-(28, 3, 'ก๋วยเตี๋ยวหมูตุ๋น', '40.00', 1, 1, '28_3.jpeg'),
-(29, 3, 'ข้าวเปล่า', '10.00', 1, 1, '29_3.jpeg'),
-(30, 3, 'เล้ง', '40.00', 1, 1, '30_3.jpeg');
+(11, 101, 'Masala Dosa', '40.00', 0, 1, 'mdosa.jpg'),
+(12, 101, 'Plain Dosa', '30.00', 1, 1, 'pdosa.jpg'),
+(13, 101, 'Idli', '30.00', 1, 1, 'idli.jpg'),
+(14, 101, 'Vade', '10.00', 1, 1, 'vade.jpg'),
+(15, 101, 'Palav', '30.00', 1, 1, 'palav.jpeg'),
+(16, 101, 'Chapati', '30.00', 1, 1, 'chapati.jpg'),
+(17, 101, 'Parota', '30.00', 1, 1, 'parota.jpg'),
+(18, 101, 'Noodles', '40.00', 1, 1, 'noodels.jpg'),
+(19, 101, 'Gobi', '35.00', 1, 1, 'gobi.jpeg'),
+(20, 101, 'Fried Rice', '40.00', 1, 1, 'frice.jpg'),
+(35, 102, 'Veg Sandwich', '40.00', 1, 1, NULL),
+(36, 102, 'Corn Sandwich', '40.00', 1, 1, NULL),
+(37, 102, 'Maggi', '30.00', 1, 1, NULL),
+(38, 102, 'Cold coffee', '20.00', 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -173,18 +159,6 @@ CREATE TABLE `order_detail` (
   `ord_buyprice` decimal(6,2) NOT NULL COMMENT 'To keep the snapshot of selected menu cost at the time of the purchase.',
   `ord_note` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `order_detail`
---
-
-INSERT INTO `order_detail` (`ord_id`, `orh_id`, `f_id`, `ord_amount`, `ord_buyprice`, `ord_note`) VALUES
-(25, 22, 28, 2, '40.00', ''),
-(26, 22, 22, 1, '30.00', ''),
-(27, 23, 13, 1, '30.00', ''),
-(28, 23, 14, 1, '30.00', ''),
-(29, 24, 22, 1, '30.00', 'No veggie'),
-(30, 25, 29, 3, '10.00', '');
 
 -- --------------------------------------------------------
 
@@ -204,16 +178,6 @@ CREATE TABLE `order_header` (
   `orh_finishedtime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `order_header`
---
-
-INSERT INTO `order_header` (`orh_id`, `orh_refcode`, `c_id`, `s_id`, `p_id`, `orh_ordertime`, `orh_pickuptime`, `orh_orderstatus`, `orh_finishedtime`) VALUES
-(22, '202110280000022', 16, 3, 20, '2021-10-28 18:25:53', '2021-10-29 08:30:00', 'FNSH', '2021-11-09 01:55:19'),
-(23, '202110290000023', 16, 2, 21, '2021-10-28 19:13:22', '2021-10-29 12:00:00', 'FNSH', '2021-11-14 16:44:32'),
-(24, '202110290000024', 16, 3, 22, '2021-10-29 05:22:06', '2021-10-29 13:00:00', 'FNSH', '2021-11-15 12:42:47'),
-(25, '202110290000025', 19, 3, 23, '2021-10-29 07:57:07', '2021-10-29 15:00:00', 'FNSH', '2021-11-15 12:17:21');
-
 -- --------------------------------------------------------
 
 --
@@ -227,16 +191,6 @@ CREATE TABLE `payment` (
   `p_amount` decimal(7,2) NOT NULL,
   `p_detail` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `payment`
---
-
-INSERT INTO `payment` (`p_id`, `c_id`, `p_type`, `p_amount`, `p_detail`) VALUES
-(20, 16, 'CRDC', '110.00', 'Visa [*4242]'),
-(21, 16, 'CRDC', '60.00', 'Visa [*4242]'),
-(22, 16, 'CRDC', '30.00', 'Visa [*4242]'),
-(23, 19, 'CRDC', '30.00', 'Visa [*4242]');
 
 -- --------------------------------------------------------
 
@@ -264,9 +218,9 @@ CREATE TABLE `shop` (
 --
 
 INSERT INTO `shop` (`s_id`, `s_username`, `s_pwd`, `s_name`, `s_location`, `s_openhour`, `s_closehour`, `s_status`, `s_preorderStatus`, `s_email`, `s_phoneno`, `s_pic`) VALUES
-(1, 'shop001', '12345678', 'ร้านอาหารตามสั่ง', 'Unit #2', '07:30:00', '14:30:00', 1, 1, 'shop001@email.com', '0900001234', 'shop1.jpeg'),
-(2, 'shop002', '12345678', 'ร้านข้าวราดแกง', 'Unit #1', '08:00:00', '17:30:00', 1, 1, 'shop002@email.com', '0900000002', NULL),
-(3, 'shop003', 'qwertyui', 'The Noodle Shop', 'Unit #3', '08:30:00', '16:00:00', 1, 1, 'shop003@email.com', '0901234567', 'shop3.jpg');
+(101, 'Canteen1', 'canteen1', 'GJB CANTEEN', 'GJB', '10:00:00', '05:00:00', 1, 1, 'canteen1@gmail.com', '9999999999', NULL),
+(102, 'Canteen2', 'canteen2', 'NRN CANTEEN', 'NRN', '10:00:00', '05:00:00', 1, 1, 'canteen2@gmail.com', '8888888888', NULL),
+(103, 'Canteen3', 'canteen3', 'Srikantu Canteen', 'Admin Block', '10:00:00', '05:00:00', 1, 1, 'canteen3@gmail.com', '7777777777', NULL);
 
 --
 -- Indexes for dumped tables
@@ -334,19 +288,19 @@ ALTER TABLE `shop`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `ct_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `ct_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
@@ -370,7 +324,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `shop`
 --
 ALTER TABLE `shop`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- Constraints for dumped tables
