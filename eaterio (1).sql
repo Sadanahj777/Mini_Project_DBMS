@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2022 at 09:11 AM
+-- Generation Time: Nov 29, 2022 at 08:02 AM
 -- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -140,10 +140,10 @@ INSERT INTO `food` (`f_id`, `s_id`, `f_name`, `f_price`, `f_todayavail`, `f_preo
 (18, 101, 'Noodles', '40.00', 1, 1, 'noodels.jpg'),
 (19, 101, 'Gobi', '35.00', 1, 1, 'gobi.jpeg'),
 (20, 101, 'Fried Rice', '40.00', 1, 1, 'frice.jpg'),
-(35, 102, 'Veg Sandwich', '40.00', 1, 1, 'sandwich.jpg'),
-(36, 102, 'Corn Sandwich', '40.00', 1, 1, 'corn sandwich.jpg'),
-(37, 102, 'Maggi', '30.00', 1, 1, 'maggi.jpg'),
-(38, 102, 'Cold coffee', '20.00', 1, 1, 'cold-coffee.jpg');
+(35, 102, 'Veg Sandwich', '40.00', 1, 1, '35_102.webp'),
+(36, 102, 'Corn Sandwich', '40.00', 1, 1, '36_102.jpg'),
+(37, 102, 'Maggi', '30.00', 1, 1, '37_102.jpg'),
+(38, 102, 'Cold coffee', '20.00', 1, 1, '38_102.webp');
 
 -- --------------------------------------------------------
 
