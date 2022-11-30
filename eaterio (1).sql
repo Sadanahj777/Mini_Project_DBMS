@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2022 at 12:37 AM
+-- Generation Time: Nov 30, 2022 at 11:42 AM
 -- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- PHP Version: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -140,10 +140,16 @@ INSERT INTO `food` (`f_id`, `s_id`, `f_name`, `f_price`, `f_todayavail`, `f_preo
 (18, 101, 'Noodles', '40.00', 1, 1, 'noodels.jpg'),
 (19, 101, 'Gobi', '35.00', 1, 1, 'gobi.jpeg'),
 (20, 101, 'Fried Rice', '40.00', 1, 1, 'frice.jpg'),
-(35, 102, 'Veg Sandwich', '40.00', 1, 1, NULL),
-(36, 102, 'Corn Sandwich', '40.00', 1, 1, NULL),
-(37, 102, 'Maggi', '30.00', 1, 1, NULL),
-(38, 102, 'Cold coffee', '20.00', 1, 1, NULL);
+(35, 102, 'Veg Sandwich', '40.00', 1, 1, 'sandwich.jpg'),
+(36, 102, 'Corn Sandwich', '40.00', 1, 1, 'corn sandwich.jpg'),
+(37, 102, 'Maggi', '30.00', 1, 1, 'maggi.jpg'),
+(38, 102, 'Cold coffee', '20.00', 1, 1, 'cold-coffee.jpg'),
+(39, 103, 'Meals', '70.00', 1, 1, 'Lunch Thali.jpg'),
+(40, 103, 'Set Dosa', '30.00', 1, 1, 'Set dosa.jpg'),
+(41, 103, 'Pokoda', '15.00', 1, 1, 'pakoda.jpg'),
+(42, 103, 'Puri', '30.00', 1, 1, 'poori.jpg'),
+(43, 103, 'Rava Idli', '30.00', 1, 1, 'Rava idle.jpg'),
+(44, 103, 'Curd Rice', '30.00', 1, 1, 'curd rice.jpg');
 
 -- --------------------------------------------------------
 
@@ -300,7 +306,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
