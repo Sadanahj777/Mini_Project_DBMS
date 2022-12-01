@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2022 at 08:43 AM
+-- Generation Time: Nov 30, 2022 at 11:42 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 7.4.30
 
@@ -143,7 +143,13 @@ INSERT INTO `food` (`f_id`, `s_id`, `f_name`, `f_price`, `f_todayavail`, `f_preo
 (35, 102, 'Veg Sandwich', '40.00', 1, 1, 'sandwich.jpg'),
 (36, 102, 'Corn Sandwich', '40.00', 1, 1, 'corn sandwich.jpg'),
 (37, 102, 'Maggi', '30.00', 1, 1, 'maggi.jpg'),
-(38, 102, 'Cold coffee', '20.00', 1, 1, 'cold coffe.jpg');
+(38, 102, 'Cold coffee', '20.00', 1, 1, 'cold-coffee.jpg'),
+(39, 103, 'Meals', '70.00', 1, 1, 'Lunch Thali.jpg'),
+(40, 103, 'Set Dosa', '30.00', 1, 1, 'Set dosa.jpg'),
+(41, 103, 'Pokoda', '15.00', 1, 1, 'pakoda.jpg'),
+(42, 103, 'Puri', '30.00', 1, 1, 'poori.jpg'),
+(43, 103, 'Rava Idli', '30.00', 1, 1, 'Rava idle.jpg'),
+(44, 103, 'Curd Rice', '30.00', 1, 1, 'curd rice.jpg');
 
 -- --------------------------------------------------------
 
@@ -300,7 +306,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `f_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `order_detail`
